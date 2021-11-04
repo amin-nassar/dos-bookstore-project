@@ -1,0 +1,5 @@
+FROM bookstore:latest
+
+EXPOSE 8080
+
+CMD ["npm", "run", "front"]

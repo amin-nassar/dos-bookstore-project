@@ -1,5 +1,5 @@
 FROM bookstore:latest
 
-EXPOSE 3030
+EXPOSE 5050
 
 CMD ["npm", "run", "order"]
