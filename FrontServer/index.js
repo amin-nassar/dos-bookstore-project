@@ -38,7 +38,9 @@ app.get("/search/:category", async (req, res) => {
 // PATCH Purchase Single Book
 app.patch("/purchase/:id", async (req, res) => {
   const bookId = req.params.id;
-  const response = await fetch(`${ORDER_ENDPOINT}/purchase/${bookId}`);
+  const response = await fetch(`${ORDER_ENDPOINT}/purchase/${bookId}`, {
+    method: "patch"
+  });
   const body = await response.json();
   if (response.status === 200) console.log(`Bought Book - ${body.title}`);
   res.status(response.status).json(body);
