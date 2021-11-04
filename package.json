@@ -1,0 +1,26 @@
+{
+  "name": "dos-bookstore-project",
+  "version": "1.0.0",
+  "description": "Bookstore Server-Side Application Built With NodeJs In a Microservices Manner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amin-nassar/dos-bookstore-project.git"
+  },
+  "keywords": [
+    "DOS",
+    "Bookstore",
+    "NodeJS",
+    "Microservices",
+    "Docker"
+  ],
+  "author": "Amin Nassar & Hasan Abd Alhaq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amin-nassar/dos-bookstore-project/issues"
+  },
+  "homepage": "https://github.com/amin-nassar/dos-bookstore-project#readme"
+}
