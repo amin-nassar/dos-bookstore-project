@@ -1,0 +1,20 @@
+version: "1.0.0"
+services:
+  catalog:
+    ports:
+      - 3030:3030
+    build:
+      context: .
+      dockerfile: Dockerfile.catalog
+  order:
+    ports:
+      - 5050:5050
+    build:
+      context: .
+      dockerfile: Dockerfile.order
+  front:
+    ports:
+      - 8080:8080
+    build:
+      context: .
+      dockerfile: Dockerfile.front
