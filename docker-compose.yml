@@ -2,19 +2,22 @@ version: "1.0.0"
 services:
   catalog:
     ports:
-      - 3030:3030
+      - ${CATALOG_PORT}:${CATALOG_PORT}
     build:
       context: .
       dockerfile: Dockerfile.catalog
+    env_file: ./.env
   order:
     ports:
-      - 5050:5050
+      - ${ORDER_PORT}:${ORDER_PORT}
     build:
       context: .
       dockerfile: Dockerfile.order
+    env_file: ./.env
   front:
     ports:
-      - 8080:8080
+      - ${FRONT_PORT}:${FRONT_PORT}
     build:
       context: .
       dockerfile: Dockerfile.front
+    env_file: ./.env

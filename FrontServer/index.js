@@ -3,12 +3,12 @@ const express = require("express");
 const fetch = require("node-fetch-commonjs");
 
 // Servers' PORTs
-const PORT_NUMBER = 8080;
-const CATALOG_PORT = 3030;
-const ORDER_PORT = 5050;
+const PORT_NUMBER = process.env.FRONT_PORT || 8080;
+const CATALOG_PORT = process.env.CATALOG_PORT || 3030;
+const ORDER_PORT = process.env.ORDER_PORT || 5050;
 
 // Domain Name
-const MAIN_IP = "192.168.1.117";
+const MAIN_IP = process.env.MAIN_IP || "192.168.1.117";
 
 // Endpoints
 const CATALOG_ENDPOINT = `http://${MAIN_IP}:${CATALOG_PORT}`;

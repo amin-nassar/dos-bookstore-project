@@ -5,11 +5,11 @@ const path = require("path");
 const fetch = require("node-fetch-commonjs");
 
 // Servers' PORTs
-const PORT_NUMBER = 5050;
-const CATALOG_PORT = 3030;
+const PORT_NUMBER = process.env.ORDER_PORT || 5050;
+const CATALOG_PORT = process.env.CATALOG_PORT || 3030;
 
 // Domain IP
-const MAIN_IP = "192.168.1.117";
+const MAIN_IP = process.env.MAIN_IP || "192.168.1.117";
 
 // Endpoints
 const CATALOG_ENDPOINT = `http://${MAIN_IP}:${CATALOG_PORT}`;

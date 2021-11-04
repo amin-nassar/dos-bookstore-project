@@ -4,10 +4,10 @@ const fs = require("fs");
 const path = require("path");
 
 // Servers' Port
-const PORT_NUMBER = 3030;
+const PORT_NUMBER = process.env.CATALOG_PORT || 3030;
 
 // Domain IP
-const MAIN_IP = "192.168.1.117";
+const MAIN_IP = process.env.MAIN_IP || "192.168.1.117";
 
 // Data File
 const storeFilePath = path.resolve(__dirname, "./store.json");
