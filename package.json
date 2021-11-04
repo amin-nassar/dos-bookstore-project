@@ -4,7 +4,9 @@
   "description": "Bookstore Server-Side Application Built With NodeJs In a Microservices Manner",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "catalog": "nodemon CatalogServer",
+    "order": "nodemon OrderServer",
+    "front": "nodemon FrontServer"
   },
   "repository": {
     "type": "git",
