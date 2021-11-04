@@ -68,6 +68,8 @@ if (response.status === 200) {
 } else res.status(response.status).json(body);
 });
 
+// PORT Listening Callback Function
+
 const listenCallback = () =>
   console.log(`Active On: http://${MAIN_IP}:${PORT_NUMBER}`);
 
