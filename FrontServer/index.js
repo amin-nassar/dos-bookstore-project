@@ -22,6 +22,7 @@ app.get("/info/:id", async (req, res) => {
   const bookId = req.params.id;
   const response = await fetch(`${CATALOG_ENDPOINT}/query-by-item/${bookId}`);
   const body = await response.json();
+  if (response.status === 200) console.log(JSON.stringify(body, null, 2));
   res.status(response.status).json(body);
 });
 
@@ -30,6 +31,7 @@ app.get("/search/:category", async (req, res) => {
   const cat = req.params.category;
   const response = await fetch(`${CATALOG_ENDPOINT}/query-by-subject/${cat}`);
   const body = await response.json();
+  console.log(JSON.stringify(body, null, 2));
   res.status(200).json(body);
 });
 
@@ -38,6 +40,7 @@ app.patch("/purchase/:id", async (req, res) => {
   const bookId = req.params.id;
   const response = await fetch(`${ORDER_ENDPOINT}/purchase/${bookId}`);
   const body = await response.json();
+  if (response.status === 200) console.log(`Bought Book - ${body.title}`);
   res.status(response.status).json(body);
 });
 
