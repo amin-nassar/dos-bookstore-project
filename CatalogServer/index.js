@@ -7,7 +7,7 @@ const path = require("path");
 const PORT_NUMBER = 3030;
 
 // Domain IP
-const MAIN_IP = "192.168.1.117";
+const MAIN_IP = "192.168.1.116";
 
 // Data File
 const storeFilePath = path.resolve(__dirname, "./store.json");
